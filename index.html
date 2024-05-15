@@ -1,0 +1,163 @@
+<!DOCTYPE html5>
+<html>
+<head>
+    <title>Naturellement - le site au naturel</title>
+    <meta charset="utf-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="stylesDesktop.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="stylesResponsive.css" type="text/css" rel="stylesheet" media="screen"/>
+
+    <script type="text/javascript" src="js/jquery-3-7-1-min.js"></script>
+    <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/burger.js"></script>
+</head>
+
+<body>
+
+    <!-- ======= LIGHTBOX ======= -->
+    <div class="lightbox">
+        <div class="close">FERMER</div>
+        <div class="displayer"></div>
+    </div>
+
+    <!-- ======= MENU BACKGROUND ======= -->
+    <div class="menuBckgd"></div>
+        <!-- Actif lorsque le menu responsive est déroulé -->
+
+    <!-- ======= HEADER ======== -->
+    <header>
+        <div class="contactBar">
+            <div class="phone"><img src="images/icon-phone.png" alt="Téléphone" title="Téléphone"> 88 888 8888</div>
+            <div class="email"><img src="images/icon-mail.png" alt="E-mail" title="E-mail"> info@sitename.com</div>
+        </div>
+        <div class="headThumb">
+            <div class="logo">
+                <img src="images/logo.png" alt="Naturellement, le site au naturel" title="Bienvenue sur Naturellement"/>
+            </div>
+            <div class="burger"><img id="burger" src="images/menu_responsive.png" alt="Menu burger"/>
+                <div class="navbar" id="'navbar">
+                    <ul class="navbarUl">
+                        <li><a href="#">ACCUEIL</a></li>
+                        <li><a href="#">LIEN 1</a></li>
+                        <li><a href="#">LIEN 2</a></li>
+                        <li><a href="#">LIEN 3</a></li>
+                        <li><a href="#">LIEN 4</a></li>
+                        <li><a href="#">LIEN 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======= CONTENT ======== -->
+    <div class="content">
+        <div class="sliderAndSquare">
+            <!-- === Slider -->
+            <div class="slider">
+                <div class="slideFrame">
+                    <div class="photo photo1"></div>
+                    <div class="photo photo2"></div>
+                    <div class="photo photo3"></div>
+                </div>
+                <div class="slideBtn" id="slideBtnLeft"><</div>
+                <div class="slideBtn" id="slideBtnRight">></div>
+            </div>
+
+            <!-- === Square Menu -->
+            <div class="squareMenu">
+                <a href="#">
+                    <div class="square" id="ecoSystem">
+                        <img src="images/icone1.png" alt="Eco System" title="Eco System"/>
+                        <div class="squareTitle">
+                            ECO SYSTEM
+                        </div>
+                        <div class="squareDescr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="square" id="saveAnimals">
+                        <img src="images/icone2.png" alt="Save Animals" title="Save Animals"/>
+                        <div class="squareTitle">
+                            SAVE ANIMALS
+                        </div>
+                        <div class="squareDescr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="square" id="solarEnergy">
+                        <img src="images/icone3.png" alt="Solar Energy" title="Solar Energy"/>
+                        <div class="squareTitle">
+                            SOLAR ENERGY
+                        </div>
+                        <div class="squareDescr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="square" id="saveForests">
+                        <img src="images/icone4.png" alt="Save Forests" title="Save Forests"/>
+                        <div class="squareTitle">
+                            SAVE FORESTS
+                        </div>
+                        <div class="squareDescr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- === Elements -->
+        <div class="itemBox">
+            <div class="item" id="item1">
+                <div class="itemThumb" id="thumb1">
+                    <!-- Image en background -->
+                </div>
+                <div class="itemTitle">KEEP THE WARM</div>
+                <div class="itemDescr">
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+                </div>
+            </div>
+            <div class="item" id="item2">
+                <div class="itemThumb" id="thumb2">
+                    <!-- Image en background -->
+                </div>
+                <div class="itemTitle">KEEP THE WARM</div>
+                <div class="itemDescr">
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+                </div>
+            </div>
+            <div class="item" id="item3">
+                <div class="itemThumb" id="thumb3">
+                    <!-- Image en background -->
+                </div>
+                <div class="itemTitle">KEEP THE WARM</div>
+                <div class="itemDescr">
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= FOOTER ======= -->
+    <footer>
+        <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">LIEN 1</a></li>
+            <li><a href="#">LIEN 2</a></li>
+            <li><a href="#">LIEN 3</a></li>
+            <li><a href="#">LIEN 4</a></li>
+            <li><a href="#">LIEN 5</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

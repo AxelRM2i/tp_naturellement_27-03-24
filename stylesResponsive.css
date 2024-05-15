@@ -1,0 +1,425 @@
+@media screen and (max-width: 1199px) {
+
+    /*
+    ======= GENERAL =========================================================
+    */
+    
+    
+    * {
+        font-family: "Biryani", sans-serif;
+        font-weight: bolder;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    
+        background: #FFFFFF;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul li {
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    
+    /*
+    ======= LIGHTBOX ========================================================
+    */
+    
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    
+        width: 100%;
+        height: 100%;
+    
+        background-color: rgba(10,10,10,0.8);
+    }
+    
+    .close {
+        position: absolute;
+    
+        width: 100%;
+        margin-top: 60px;
+        box-sizing: border-box;
+    
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 0.8em;
+        cursor: pointer;
+    }
+    
+    .displayer {
+        position: relative;
+        width: 1050px;
+        height: 700px;
+        margin: 90px auto;
+        overflow: hidden;
+    
+        border: 20px solid #FFFFFF;
+    }
+    
+    .displayer img {
+        height: 100%;
+    }
+    
+    
+    /* Classes pour changer l'état de la lightbox en fonction de la photo : */
+    
+    .getPhoto1 {
+        background: url(images/pic1.jpg);
+    }
+    
+    .getPhoto2 {
+        background: url(images/pic7.jpg);
+    }
+    
+    .getPhoto3 {
+        background: url(images/pic3.jpg);
+    }
+    
+    
+    /*
+    ======= HEADER ==========================================================
+    */
+    
+    header {
+        width: 100%;
+        height: 80px;
+    }
+    
+    .contactBar {
+        display: none;
+        /* N'apparaît pas pour smartphone */
+    }
+    
+    .headThumb {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        padding : 10px 10px 10px 40px;
+        box-sizing: border-box;
+    }
+    
+    .logo img {
+        height: 65px;
+    }
+
+    .burger img {
+        margin: 5px;
+    }
+    
+    /* Essayer de convertir la navbar en menu vertical,
+       aligné à droite juste en-dessous du burger
+       (en absolute, par-dessus tout).
+        - Fond sombre ?
+        - Sortir du menu en cliquant en-dehors de la ul ? */
+
+    .navbar {
+        position: absolute;
+        display: none;
+        z-index: 97;
+            /* ... Change en 'block' au clic sur le burger */
+    
+        margin: auto 0;
+    
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+    }
+
+    .navbar ul {
+        position: absolute;
+        z-index: 97;
+        top: -75px;
+        /* right: -60px;  */
+        /* Retiré à cause de l'animation qui ne fonctionne pas */
+        right: 0px;
+        
+        text-align: right;
+    }
+    
+    .navbar ul li {
+        display: block;
+        /* z-index: 97; */
+
+        width: 260px;
+        height: 48px;
+        margin: 10px;
+        padding: 10px; 
+        box-sizing: border-box;
+
+        background-color: #6CB33E;
+        font-size: 1.4em;
+    }
+    
+    .navbar ul li a {
+            color: #FFFFFF;
+    }
+
+    .menuBckgd {
+        display: none;
+            /* Ne s'affiche que lorsque s'affiche le menu burger */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 95;
+        
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(10,10,10,0.4);
+    }
+    
+    
+    /*
+    ======= CONTENT =========================================================
+    */
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+    }
+    
+    /*
+    ===== Slider =====
+    */
+    
+    .sliderAndSquare {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 750px;
+    
+        padding: 0;
+        margin: 0;
+    }
+    
+    .slider {
+        position: relative;
+    
+        width: 100%;
+        height: 580px;
+        margin: 0 auto;
+    
+        background: #6CB33E;
+    }
+    
+    .slideFrame {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    
+        max-width: 5760px;
+        height: 100%;
+        margin: 0 auto;
+        /* Délimite la surface occupée par les images,
+           en cas de très grand écran */
+        overflow: hidden;
+    }
+    
+    .photo1 {
+        left: -50%;
+        z-index: 3;
+        
+        width: 1920px;
+    
+        background: url(images/pic1.jpg);
+    }
+    
+    .photo2 {
+        left: 0;
+        z-index: 2;
+    
+        width: 0px;
+    
+        background: url(images/pic7.jpg);
+    }
+    
+    .photo3 {
+        right: 0;
+        z-index: 1;
+    
+        width: 0px;
+    
+        background: url(images/pic8.jpg);
+    }
+    
+    .photo {
+        position: absolute;
+        top: 0;
+
+        height: 100%;
+
+        background-repeat: no-repeat;
+        background-position-y: 45%;
+        background-size: cover;
+    }
+    
+    .slideBtn {
+        display: none;
+        /* N'apparaît pas pour smartphone */
+    }
+    
+    
+    /*
+    ===== Square Menu =====
+    */
+    
+    /* N'afficher qu'une case à la fois comme le dit l'énoncé,
+    mais ajouter un scroll horizontal pour aller chercher
+    les autres ? */
+
+    .squareMenu {
+        position: absolute;
+        align-self: center;
+        z-index: 90;
+    
+        top: 520px;
+        width: 100%;
+        height: 330px;
+        margin: 0 auto;
+    }
+    
+    /* .square {
+        width: 230px;
+        height: 230px;
+    
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+    
+        text-align: center;
+    }
+    
+    // je laisse le code en commentaire, dans l'éventualité de réaliser
+    plus tard un scroll avec tous les menus .square */
+    
+    .squareTitle {
+        margin-bottom: 20px;
+    
+        font-size: 1.4em;
+        color: #FFFFFF;
+    }
+    
+    .squareDescr {
+        font-size: 1em;
+        color: #FFFFFF;
+    }
+    
+    #ecoSystem {
+        width: 100%;
+        height: 330px;
+    
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+    
+        text-align: center;
+        background-color: #6CB33E;
+    }
+    
+    #saveAnimals, #solarEnergy, #saveForests {
+        display: none;
+    }
+    
+    
+    /*
+    ===== Items =====
+    */
+      
+    .itemBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        height: 380px;
+        margin-top: 140px;
+
+        opacity: 0%;
+            /* ... Le script fading.js fait apparaître la div au scrolling */
+    }
+    
+    .item {
+        width: 80%;
+        height: 100%;
+        margin: 0 15px;
+    }
+    
+    .itemThumb {
+        width: 100%;
+        height: 220px;
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #thumb1 {
+        background: url(images/pic3.jpg);
+        background-size: cover;
+        background-position-y: 70%;
+    }
+    
+    #thumb2 {
+        background: url(images/pic2.jpg);
+        background-size: cover;
+    }
+    
+    #thumb3 {
+        background: url(images/pic4.jpg);
+        background-size: cover;
+    }
+    
+    .itemTitle {
+        width: 100%;
+        height: 45px;
+        padding-top: 12px;
+        box-sizing: border-box;
+    
+        background: #6CB33E;
+        font-size: 0.8em;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+    
+    .itemDescr {
+        text-align: center;
+        padding: 20px;
+    
+        font-size: 0.8em;
+        font-weight: 700;
+        color: #666;
+    }
+    
+    
+    /*
+    ======= FOOTER ===========================================================
+    */
+    
+    footer {
+        display: none;
+        /* N'apparaît pas pour smartphone */
+    }
+    
+    }
+    
