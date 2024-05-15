@@ -7,6 +7,9 @@ M2i Formation (Lyon)
 ### Formateur
 Gaël DANIELE
 
+### Date
+27 mars 2024
+
 ## Consignes
 1. Montage en CSS + html + Javascript/JQuery.
 2. Créer un menu avec sous-menu responsive (fonctions JQuery).
