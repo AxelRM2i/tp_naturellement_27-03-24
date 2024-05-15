@@ -4,10 +4,10 @@
 ### Centre de formation
 M2i Formation (Lyon)
 
-###Formateur
+### Formateur
 Gaël DANIELE
 
-##Consignes
+## Consignes
 1. Montage en CSS + html + Javascript/JQuery.
 2. Créer un menu avec sous-menu responsive (fonctions JQuery).
 3. Animer les éléments au scroll (fonctions JQuery).
